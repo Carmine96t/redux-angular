@@ -11,18 +11,22 @@ import { UsersComponent } from './containers/usersContainers/users/users.compone
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { usersReducer } from './state/users.reducer';
+import { UserAdderComponent } from './components/users/user-adder/user-adder.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UsersListComponent
+    UsersListComponent,
+    UserAdderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     StoreModule.forRoot(
       {users: usersReducer}
     ),

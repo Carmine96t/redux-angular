@@ -27,9 +27,9 @@ export class UsersComponent implements OnInit {
     this.store.select(fromUser.selectUsers).pipe().subscribe((users) => this.users = users);
   }
 
-  /*onAdd(user: User){
-    this.store.dispatch(addUser({user: user }));
-  }*/
+  onAdd(user: User){
+    this.store.dispatch(UserActions.addUser({user: user }));
+  }
 
   onRemove(user: User){
     this.store.dispatch(UserActions.removeUser({user: user}));

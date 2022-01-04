@@ -1,5 +1,7 @@
 <p>users works!</p>
 
+<h2>User adder</h2>
+<app-user-adder  [users]="users" (add)="onAdd($event)"></app-user-adder>
 
 <h2>Users</h2>
 <app-users-list class="book-list" [users]="users" (remove)="onRemove($event)"></app-users-list>
